@@ -4,20 +4,20 @@ CREATE DATABASE employees_db;
 USE employees_db;
 
 CREATE TABLE department (
-    id INT NOT NULL AUTO_INCREMENT,
+    id INT PRIMARY KEY AUTO_INCREMENT,
     deptName VARCHAR(30) NOT NULL
 );
 
-CREATE TABLE role (
-    id INT NOT NULL AUTO_INCREMENT,
+CREATE TABLE roles (
+    id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR(30) NOT NULL,
     salary DECIMAL NOT NULL,
     deptId INT
 );
 
 CREATE TABLE employee (
-    id INT NOT NULL,
-    firstName VARVHAR(30) NOT NULL,
+    id INT PRIMARY KEY,
+    firstName VARCHAR(30) NOT NULL,
     lastName VARCHAR(30) NOT NULL,
     roleId INT,
     managerId INT
